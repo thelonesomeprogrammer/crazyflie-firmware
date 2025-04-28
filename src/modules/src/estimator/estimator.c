@@ -115,13 +115,15 @@ void stateEstimatorSwitchTo(StateEstimatorType estimator) {
   if (StateEstimatorTypeAutoSelect == newEstimator) {
     newEstimator = DEFAULT_ESTIMATOR;
   }
-
+  
   #if defined(CONFIG_ESTIMATOR_KALMAN)
     #define ESTIMATOR StateEstimatorTypeKalman
   #elif defined(CONFIG_ESTIMATOR_UKF)
     #define ESTIMATOR StateEstimatorTypeUkf
   #elif defined(CONFIG_ESTIMATOR_COMPLEMENTARY)
     #define ESTIMATOR StateEstimatorTypeComplementary
+  #elif defined(CONFIG_ESTIMATOR_OOT)
+    #define ESTIMATOR StateEstimatorTypeOutOfTree
   #else
     #define ESTIMATOR StateEstimatorTypeAutoSelect
   #endif
