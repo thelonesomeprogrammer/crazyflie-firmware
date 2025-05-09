@@ -118,8 +118,8 @@ static bool enableRangeStreamFloat = false;
 static CRTPPacket LhAngle;
 #endif
 static bool enableLighthouseAngleStream = false;
-static float extPosStdDev = 0.01;
-static float extQuatStdDev = 4.5e-3;
+static float extPosStdDev = 0.001;
+static float extQuatStdDev = 4.5e-4;
 static bool isInit = false;
 static uint8_t my_id;
 static uint16_t tickOfLastPacket; // tick when last packet was received

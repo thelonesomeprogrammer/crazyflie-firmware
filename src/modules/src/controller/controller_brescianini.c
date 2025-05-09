@@ -40,11 +40,15 @@
 #include "physicalConstants.h"
 #include "platform_defaults.h"
 
-static struct mat33 CRAZYFLIE_INERTIA =
-    {{{16.6e-6f, 0.83e-6f, 0.72e-6f},
-      {0.83e-6f, 16.6e-6f, 1.8e-6f},
-      {0.72e-6f, 1.8e-6f, 29.3e-6f}}};
+// static struct mat33 CRAZYFLIE_INERTIA =
+//     {{{16.6e-6f, 0.83e-6f, 0.72e-6f},
+//       {0.83e-6f, 16.6e-6f, 1.8e-6f},
+//       {0.72e-6f, 1.8e-6f, 29.3e-6f}}};
 
+static struct mat33 CRAZYFLIE_INERTIA =
+      {{{2.032131e-5f, -3.58045e-6f, 7.2e-7f},
+        {-3.58045e-6f, 3.032131e-5f, 1.8e-6f},
+        {0.72e-6f, 1.8e-6f, 5.589266e-5f}}};
 
 // tau is a time constant, lower -> more aggressive control (weight on position error)
 // zeta is a damping factor, higher -> more damping (weight on velocity error)
