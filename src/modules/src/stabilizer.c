@@ -378,6 +378,13 @@ static void stabilizerTask(void* param)
   }
 }
 
+LOG_GROUP_START(control)
+LOG_ADD(LOG_FLOAT, thrustSi, &control.thrustSi)
+LOG_ADD(LOG_FLOAT, torqueX, &control.torqueX)
+LOG_ADD(LOG_FLOAT, torqueY, &control.torqueY)
+LOG_ADD(LOG_FLOAT, torqueZ, &control.torqueZ)
+LOG_GROUP_STOP(control)
+
 /**
  * Parameters to set the estimator and controller type
  * for the stabilizer module
